@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>si por favor</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            La edad de tu perro en años humano
+        </h1>
+    </header>
+    <br><br><br>
+    <input type="number" id="nr">
+    <button id="btn">calcularLN</button>
+    <button id="btn1">Metodo 7</button>
+    <br><br><br>
+    <div id="resultado" class="res"></div>
+    <div>
+        <img src="perro.jpg" alt="" height="50%">
+    </div>
+    <script language="javascript">
+        var a=document.getElementById("btn");
+        a.addEventListener("click",edad)
+        var b=document.getElementById("btn1");
+        b.addEventListener("click",edad7)
+
+        function edad(){
+            var n=parseInt(document.getElementById('nr').value);
+            var e=(Math.log (n))*16+31
+            let r = e.toFixed(0);
+            document.getElementById("resultado").innerHTML ="la edad de tu perro juancho es "+r+" años"
+        }
+
+        function edad7(){
+            var n=parseInt(document.getElementById('nr').value);
+            var r=n*7
+            document.getElementById("resultado").innerHTML ="la edad de tu perro juancho es "+r+" años"
+        }
+       
+        </script>
+    
+</body>
+</html>
